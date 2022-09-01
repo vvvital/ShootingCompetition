@@ -23,7 +23,7 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public void save() throws SQLException {
+    public void update(User user) throws SQLException {
         jdbcTemplate.update("insert into users VALUES ('1000','Vitaliy','Kovalenko','44','vvvital@i.ua','52159');",ROW_MAPPER);
     }
 
