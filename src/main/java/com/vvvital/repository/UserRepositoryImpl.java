@@ -16,7 +16,7 @@ public class UserRepositoryImpl implements UserRepository {
     private final JdbcTemplate jdbcTemplate;
 
     @Autowired
-    public UserRepositoryImpl(DataSource dataSource, UserMapper userMapper) {
+    public UserRepositoryImpl(DataSource dataSource,UserMapper userMapper) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
         this.ROW_MAPPER = userMapper;
     }
@@ -35,7 +35,7 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public List<User> getAll() {
-        return jdbcTemplate.query("select * from users", ROW_MAPPER);
+        return jdbcTemplate.query("select * from users",ROW_MAPPER);
     }
 
     @Override
