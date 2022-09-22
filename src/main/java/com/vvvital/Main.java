@@ -22,11 +22,12 @@ public class Main {
         bean.setPassword("52159");
 
          */
+        //userRepository.save();
 
         User user = userRepository.getAll().get(0);
         System.out.println(user.toString());
 
-        System.out.println(bean.toString());
+        //System.out.println(bean.toString());
         //UserRepository userRepository=context.getBean(UserRepositoryImpl.class);
         //userRepository.save();
 
