@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.sql.SQLException;
+import java.util.List;
 
 @Controller
 public class MainController {
@@ -52,6 +53,11 @@ public class MainController {
 
         userRepository.save(user);
         return "index";
+    }
+
+    @GetMapping("/user")
+    public List<User> getAll(){
+        return null;
     }
 
 }

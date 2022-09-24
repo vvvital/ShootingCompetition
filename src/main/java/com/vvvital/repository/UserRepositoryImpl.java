@@ -3,10 +3,12 @@ package com.vvvital.repository;
 import com.vvvital.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
+import java.sql.ResultSet;
 import java.util.List;
 
 @Repository
@@ -30,7 +32,8 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public User getId(Integer id) {
-        return jdbcTemplate.query("select User u from users where u.id:=id", ROW_MAPPER).get(0);
+        String query="select User u from users where id="+id;
+        return jdbcTemplate.query("select * from users where id=?",ROW_MAPPER,id).get(0);
     }
 
     @Override
@@ -40,6 +43,6 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public void delete(Integer id) {
-        jdbcTemplate.update("delete User u from users where u.id:=id");
+        jdbcTemplate.update("delete from users where id=?",id);
     }
 }

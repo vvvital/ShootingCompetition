@@ -24,8 +24,10 @@ public class Main {
          */
         //userRepository.save();
 
-        User user = userRepository.getAll().get(0);
-        System.out.println(user.toString());
+        for (User u:userRepository.getAll()
+             ) {
+            System.out.println(u.toString());
+        }
 
         //System.out.println(bean.toString());
         //UserRepository userRepository=context.getBean(UserRepositoryImpl.class);
