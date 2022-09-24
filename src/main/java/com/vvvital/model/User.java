@@ -2,6 +2,8 @@ package com.vvvital.model;
 
 import org.springframework.stereotype.Component;
 
+import java.util.Objects;
+
 @Component
 public class User {
 
@@ -14,6 +16,15 @@ public class User {
     private Categories category;
 
     public User(String name, String lastName, int age, String email, String password) {
+        this.name = name;
+        this.lastName = lastName;
+        this.age = age;
+        this.email = email;
+        this.password = password;
+    }
+
+    public User(Integer id, String name, String lastName, int age, String email, String password) {
+        this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.age = age;
@@ -91,5 +102,18 @@ public class User {
                 ", password='" + password + '\'' +
                 ", category=" + category +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return age == user.age && Objects.equals(id, user.id) && Objects.equals(name, user.name) && Objects.equals(lastName, user.lastName) && Objects.equals(email, user.email) && Objects.equals(password, user.password) && category == user.category;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, lastName, age, email, password, category);
     }
 }
