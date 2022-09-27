@@ -6,11 +6,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.sql.SQLException;
+import java.util.Arrays;
 import java.util.List;
 
 @Controller
@@ -20,7 +23,6 @@ public class MainController {
 
     @Autowired
     private UserRepository userRepository;
-
 
     @GetMapping("/")
     public String root() {
@@ -55,9 +57,13 @@ public class MainController {
         return "index";
     }
 
-    @GetMapping("/user")
-    public List<User> getAll(){
-        return null;
+    @GetMapping("/users")
+    public String getAll(ModelMap model){
+        logger.info(" method getAll ");
+        List<User>users=userRepository.getAll();
+        logger.info(Arrays.toString(users.toArray()));
+        model.addAttribute("users",users);
+        return "users";
     }
 
 }

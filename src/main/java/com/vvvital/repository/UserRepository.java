@@ -8,9 +8,9 @@ import java.util.List;
 
 @Repository
 public interface UserRepository {
-    public void save(User user
+    void save(User user
     ) throws SQLException;
-    public User getId(Integer id);
-    public List<User> getAll();
-    public void delete(Integer id);
+    User getId(Integer id);
+    List<User> getAll();
+    void delete(Integer id);
 }

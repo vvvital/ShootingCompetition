@@ -9,16 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dfb188f-7a81-4f4a-9455-fc53555f2035" name="Changes" comment="implement method save&#10;resolved spring context">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="faab7f72-714f-4657-b031-a6ec748d35a4" name="Changes" comment="implement method save&#10;resolved spring context">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/model/Categories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/model/Categories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/web/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/web/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/springConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/springConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/users.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DbTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +40,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -111,7 +111,7 @@
       <recent name="com.vvvital.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserRepositoryImplTest">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.65">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.vvvital.Main" />
       <module name="ShootingCompetition" />
@@ -267,7 +267,7 @@
         <item itemvalue="JUnit.UserRepositoryImplTest.getId" />
         <item itemvalue="JUnit.UserRepositoryImplTest.getAll" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.UserRepositoryImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -282,7 +282,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2dfb188f-7a81-4f4a-9455-fc53555f2035" name="Changes" comment="" />
+      <changelist id="faab7f72-714f-4657-b031-a6ec748d35a4" name="Changes" comment="implement method save&#10;resolved spring context" />
       <created>1661011292205</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -317,6 +317,9 @@
       <workItem from="1663953793940" duration="5592000" />
       <workItem from="1663960264204" duration="9415000" />
       <workItem from="1664039092260" duration="4244000" />
+      <workItem from="1664116248322" duration="16213000" />
+      <workItem from="1664214976444" duration="7823000" />
+      <workItem from="1664301072343" duration="1012000" />
     </task>
     <task id="LOCAL-00001" summary="start project first commit">
       <created>1661012223715</created>
@@ -363,8 +366,19 @@
     <option name="LAST_COMMIT_MESSAGE" value="implement method save&#10;resolved spring context" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vvvital/web/MainController.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="org.apache.catalina.core.DefaultInstanceManager" memberName="preDestroyMethods" />
+        <PinnedItemInfo parentTag="org.apache.catalina.connector.Request" memberName="inputBuffer" />
         <PinnedItemInfo parentTag="org.apache.jasper.runtime.PageContextImpl" memberName="request" />
       </pinned-members>
     </pin-to-top-manager>

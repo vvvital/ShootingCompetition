@@ -2,14 +2,14 @@ package com.vvvital.repository;
 
 import com.vvvital.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.support.DataAccessUtils;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
-import java.sql.ResultSet;
 import java.util.List;
+import java.util.Objects;
 
 @Repository
 public class UserRepositoryImpl implements UserRepository {
@@ -32,13 +32,12 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public User getId(Integer id) {
-        String query="select User u from users where id="+id;
-        return jdbcTemplate.query("select * from users where id=?",ROW_MAPPER,id).get(0);
+        return DataAccessUtils.singleResult(jdbcTemplate.query("select * from users where id=?",ROW_MAPPER,id));
     }
 
     @Override
     public List<User> getAll() {
-        return jdbcTemplate.query("select * from users",ROW_MAPPER);
+        return jdbcTemplate.query("select * from users order by lastname",ROW_MAPPER);
     }
 
     @Override
