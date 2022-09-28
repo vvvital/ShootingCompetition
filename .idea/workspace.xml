@@ -11,13 +11,12 @@
   <component name="ChangeListManager">
     <list default="true" id="faab7f72-714f-4657-b031-a6ec748d35a4" name="Changes" comment="implement method save&#10;resolved spring context">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/model/Categories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/model/Categories.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/web/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/web/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/springConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/springConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/users.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,15 +31,15 @@
         <option value="Interface" />
         <option value="Class" />
         <option value="spring-beans.schema" />
-        <option value="Jsp File" />
         <option value="JUnit4 Test Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="test" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -95,11 +94,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Projects\ShootingCompetition\src\main\resource" />
-      <recent name="C:\Projects\ShootingCompetition\src\main\resource\db" />
-      <recent name="C:\Projects\ShootingCompetition\src\main\resource\spring" />
       <recent name="C:\Projects\ShootingCompetition\src\main\webapp" />
-      <recent name="C:\Projects\ShootingCompetition\src\main\webapp\WEB-INF\view" />
+      <recent name="C:\Projects\ShootingCompetition\src\main\webapp\WEB-INF\jsp" />
+      <recent name="C:\Projects\ShootingCompetition\src\main\webapp\WEB-INF" />
+      <recent name="C:\Projects\ShootingCompetition\src\main\webapp\jsp" />
+      <recent name="C:\Projects\ShootingCompetition\src\main\resource" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -319,7 +318,8 @@
       <workItem from="1664039092260" duration="4244000" />
       <workItem from="1664116248322" duration="16213000" />
       <workItem from="1664214976444" duration="7823000" />
-      <workItem from="1664301072343" duration="1012000" />
+      <workItem from="1664301072343" duration="10798000" />
+      <workItem from="1664388060033" duration="3875000" />
     </task>
     <task id="LOCAL-00001" summary="start project first commit">
       <created>1661012223715</created>
@@ -342,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663869890800</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="implement method save&#10;resolved spring context">
+      <created>1664302515958</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664302515958</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +377,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/vvvital/web/MainController.java</url>
-          <line>64</line>
+          <line>63</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -382,6 +389,11 @@
         <PinnedItemInfo parentTag="org.apache.jasper.runtime.PageContextImpl" memberName="request" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="users" language="JSP" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

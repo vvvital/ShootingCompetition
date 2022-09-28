@@ -17,8 +17,7 @@
         <td>email</td>
     </tr>
     </thead>
-    <jsp:useBean id="user" scope="request" class="com.vvvital.model.User"/>
-    <c:forEach var="user" items="${users}">
+    <c:forEach var="user" items="${users.toArray()}">
         <tr>
             <td><c:out value="${user.lastName}"/></td>
             <td><c:out value="${user.name}"/></td>
@@ -28,5 +27,7 @@
     </c:forEach>
 
 </table>
+
+<a href="index.jsp"> Main page </a>
 </body>
 </html>
