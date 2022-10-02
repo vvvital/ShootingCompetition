@@ -28,14 +28,20 @@
             <td><c:out value="${user.email}"/></td>
             <td><c:out value="${user.role}"/></td>
 
-            <td><a href="http://localhost:8080/registration?id=${user.id}"> Update </a> </td>
-            <td><a href="http://localhost:8080/delete?id=${user.id}"> Delete </a> </td>
+            <td><a href="http://localhost:8080/registration?id=${user.id}"> Update </a></td>
+            <td><a href="http://localhost:8080/delete?id=${user.id}"> Delete </a></td>
         </tr>
     </c:forEach>
 
 </table>
-
-<a href="http://localhost:8080"> Main page </a>
-<a href="http://localhost:8080/registration"> Create user</a>
+<p>
+    <a href="http://localhost:8080"> Main page </a>
+</p>
+<p>
+    <a href="http://localhost:8080/registration"> Create user</a>
+</p>
+<p>
+    <a href="http://localhost:8080/logout">Log out</a>
+</p>
 </body>
 </html>

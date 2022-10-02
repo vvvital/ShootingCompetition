@@ -35,8 +35,13 @@ public class MainController {
         if (userId < 0) {
             return "start";
         } else {
-            model.addAttribute("user", userRepository.getId(userId));
-            return "registered";
+            User user=userRepository.getId(userId);
+            model.addAttribute("user", user);
+            if (user.getRole()==Role.ADMIN) {
+                return "redirect:users";
+            }else {
+                return "registered";
+            }
         }
     }
 
@@ -107,6 +112,12 @@ public class MainController {
         logger.info("delete {}",id);
         userRepository.delete(id);
         return "redirect:users";
+    }
+
+    @GetMapping("logout")
+    public String logOut(@RequestHeader (name = "cookie") String cookie){
+        userService.removeCookie(cookie);
+        return "start";
     }
 
     protected boolean checkKey(String email, String password) {
