@@ -5,7 +5,6 @@ import java.util.Objects;
 
 @Component
 public class User {
-
     private Integer id;
     private String name;
     private String lastName;

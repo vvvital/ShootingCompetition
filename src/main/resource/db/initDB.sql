@@ -1,5 +1,4 @@
 drop table if exists users cascade ;
-drop table if exists categories;
 drop sequence if exists global_seq cascade ;
 drop sequence if exists serial;
 
@@ -17,6 +16,7 @@ Create table users
     role                             varchar not null
 );
 create unique index user_unique_email_index on users (email);
+
 
 
 insert into users VALUES (nextval('serial'),'Vitaliy','Kovalenko','44','vvvital@i.ua','52159','ADMIN');
