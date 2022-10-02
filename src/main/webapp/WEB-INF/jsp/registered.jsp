@@ -12,7 +12,8 @@
 </head>
 <body>
 <h2>Main Page</h2>
-<p>Fol Registered user</p>
+<p>Main page For Registered user</p>
 <p>${user.name}</p>
+<a href="http://localhost:8080/logout">Log out</a>
 </body>
 </html>

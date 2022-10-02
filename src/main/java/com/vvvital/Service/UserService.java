@@ -22,4 +22,8 @@ public class UserService {
         cookiesMap.put(cookie,id);
     }
 
+    public void removeCookie(String cookie){
+        cookiesMap.remove(cookie);
+    }
+
 }
