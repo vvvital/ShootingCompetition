@@ -8,9 +8,10 @@ import java.util.List;
 
 @Repository
 public interface UserRepository {
-    void save(User user
+    void update(User user
     ) throws SQLException;
     User getId(Integer id);
     List<User> getAll();
     void delete(Integer id);
+    User getEmail(String email);
 }

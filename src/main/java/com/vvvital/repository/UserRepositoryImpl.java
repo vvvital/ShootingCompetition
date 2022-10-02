@@ -1,6 +1,8 @@
 package com.vvvital.repository;
 
 import com.vvvital.model.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.support.DataAccessUtils;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -14,6 +16,7 @@ import java.util.Objects;
 @Repository
 public class UserRepositoryImpl implements UserRepository {
 
+    private Logger logger= LoggerFactory.getLogger(UserRepositoryImpl.class);
     private final RowMapper<User> ROW_MAPPER;
     private final JdbcTemplate jdbcTemplate;
 
@@ -24,15 +27,26 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public void save(User user) {
-        jdbcTemplate.update("INSERT INTO users VALUES (nextval('serial'),?,?,?,?,?)"
-                , user.getName(), user.getLastName(), user.getAge(), user.getEmail(), user.getPassword());
+    public void update(User user) {
+        if (user.getId()==null) {
+            logger.info("create user {}",user.toString());
+            jdbcTemplate.update("INSERT INTO users VALUES (nextval('serial'),?,?,?,?,?,?)"
+                    , user.getName(), user.getLastName(), user.getAge(), user.getEmail(), user.getPassword(), user.getRole().toString());
+        }else {
+            logger.info("update user {}", user.toString());
+            jdbcTemplate.update("UPDATE users set name=?,lastname=?,age=?,email=?,password=?,role=? where id=?",
+                    user.getName(),user.getLastName(),user.getAge(),user.getEmail(),user.getPassword(),user.getRole().toString(),user.getId());
+        }
 
     }
 
     @Override
     public User getId(Integer id) {
         return DataAccessUtils.singleResult(jdbcTemplate.query("select * from users where id=?",ROW_MAPPER,id));
+    }
+
+    public User getEmail(String email){
+        return DataAccessUtils.singleResult(jdbcTemplate.query("select * from users where email=?",ROW_MAPPER,email));
     }
 
     @Override
@@ -42,6 +56,7 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public void delete(Integer id) {
+        logger.info("delete {}",id);
         jdbcTemplate.update("delete from users where id=?",id);
     }
 }

@@ -1,5 +1,6 @@
 package com.vvvital.repository;
 
+import com.vvvital.model.Role;
 import com.vvvital.model.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -37,8 +38,8 @@ public class UserRepositoryImplTest {
         ) {
             if (u.getId() > lastId) lastId = u.getId();
         }
-        User userActual = new User("Ivan", "Ivanov", 20, "ioann@i.ua", "321");
-        userRepository.save(userActual);
+        User userActual = new User("Ivan", "Ivanov", 20, "ioann@i.ua", "321", Role.ADMIN);
+        userRepository.update(userActual);
         userActual.setId(lastId + 1);
         User userExpected = userRepository.getId(lastId + 1);
         logger.info("expectedList after save" + Arrays.toString(userRepository.getAll().toArray()));
@@ -47,7 +48,7 @@ public class UserRepositoryImplTest {
 
     @Test
     public void getId() {
-        User userExpected = new User(1000, "Vitaliy", "Kovalenko", 44, "vvvital@i.ua", "52159");
+        User userExpected = new User(1000, "Vitaliy", "Kovalenko", 44, "vvvital@i.ua", "52159", Role.ADMIN);
         User userActual = userRepository.getId(1000);
         logger.info(userActual.toString());
         assertEquals(userExpected, userActual);
@@ -57,9 +58,9 @@ public class UserRepositoryImplTest {
     public void getAll() {
         List<User> usersActual = userRepository.getAll();
         List<User> usersExpected = Arrays.asList(
-                new User(1000, "Vitaliy", "Kovalenko", 44, "vvvital@i.ua", "52159"),
-                new User(1001, "Sergey", "Kovalenko", 45, "serg@i.ua", "52159"),
-                new User(1002, "Alex", "Kovalenko", 46, "alex@i.ua", "52159"));
+                new User(1000, "Vitaliy", "Kovalenko", 44, "vvvital@i.ua", "52159", Role.ADMIN),
+                new User(1001, "Sergey", "Kovalenko", 45, "serg@i.ua", "52159", Role.USER),
+                new User(1002, "Alex", "Kovalenko", 46, "alex@i.ua", "52159", Role.USER));
         assertEquals(usersExpected, usersActual);
     }
 
