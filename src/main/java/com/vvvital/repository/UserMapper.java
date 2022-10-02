@@ -1,5 +1,6 @@
 package com.vvvital.repository;
 
+import com.vvvital.model.Role;
 import com.vvvital.model.User;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
@@ -18,6 +19,7 @@ public class UserMapper implements RowMapper<User> {
         user.setAge(rs.getInt("age"));
         user.setEmail(rs.getString("email"));
         user.setPassword(rs.getString("password"));
+        user.setRole(Role.valueOf(rs.getString("role")));
         return user;
     }
 }

@@ -9,15 +9,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faab7f72-714f-4657-b031-a6ec748d35a4" name="Changes" comment="implement method save&#10;resolved spring context">
+    <list default="true" id="faab7f72-714f-4657-b031-a6ec748d35a4" name="Changes" comment="create jsp form">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/Service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/UserRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/web/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/web/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/db/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/db/initDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/springConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/springConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/users.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/start.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/registered.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vvvital/repository/UserRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vvvital/repository/UserRepositoryImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,11 +36,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="spring-beans.schema" />
         <option value="JUnit4 Test Class" />
+        <option value="Enum" />
+        <option value="Class" />
         <option value="Jsp File" />
       </list>
     </option>
@@ -45,7 +54,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/webapp/users.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -94,8 +103,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Projects\ShootingCompetition\src\main\webapp" />
       <recent name="C:\Projects\ShootingCompetition\src\main\webapp\WEB-INF\jsp" />
+      <recent name="C:\Projects\ShootingCompetition\src\main\webapp" />
       <recent name="C:\Projects\ShootingCompetition\src\main\webapp\WEB-INF" />
       <recent name="C:\Projects\ShootingCompetition\src\main\webapp\jsp" />
       <recent name="C:\Projects\ShootingCompetition\src\main\resource" />
@@ -262,11 +271,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserRepositoryImplTest" />
         <item itemvalue="JUnit.UserRepositoryImplTest.getId" />
+        <item itemvalue="JUnit.UserRepositoryImplTest" />
         <item itemvalue="JUnit.UserRepositoryImplTest.getAll" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.UserRepositoryImplTest" />
+        <item itemvalue="JUnit.UserRepositoryImplTest.getId" />
       </list>
     </recent_temporary>
   </component>
@@ -320,6 +329,10 @@
       <workItem from="1664214976444" duration="7823000" />
       <workItem from="1664301072343" duration="10798000" />
       <workItem from="1664388060033" duration="3875000" />
+      <workItem from="1664474278078" duration="8874000" />
+      <workItem from="1664562144187" duration="3882000" />
+      <workItem from="1664624575639" duration="13846000" />
+      <workItem from="1664702593012" duration="13168000" />
     </task>
     <task id="LOCAL-00001" summary="start project first commit">
       <created>1661012223715</created>
@@ -370,15 +383,16 @@
     <MESSAGE value="start project first commit" />
     <MESSAGE value="added front jsp" />
     <MESSAGE value="implement method save&#10;resolved spring context" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement method save&#10;resolved spring context" />
+    <MESSAGE value="create jsp form" />
+    <option name="LAST_COMMIT_MESSAGE" value="create jsp form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/vvvital/web/MainController.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="2" />
+          <line>33</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

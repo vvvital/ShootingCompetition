@@ -11,23 +11,31 @@
 <table border="1" cellpadding="8" cellspacing="0">
     <thead>
     <tr>
+        <td>userId</td>
         <td>Last Name</td>
         <td>Name</td>
         <td>Age</td>
         <td>email</td>
+        <td>Role</td>
     </tr>
     </thead>
     <c:forEach var="user" items="${users.toArray()}">
         <tr>
+            <td>${user.id}</td>
             <td><c:out value="${user.lastName}"/></td>
             <td><c:out value="${user.name}"/></td>
             <td><c:out value="${user.age}"/></td>
             <td><c:out value="${user.email}"/></td>
+            <td><c:out value="${user.role}"/></td>
+
+            <td><a href="http://localhost:8080/registration?id=${user.id}"> Update </a> </td>
+            <td><a href="http://localhost:8080/delete?id=${user.id}"> Delete </a> </td>
         </tr>
     </c:forEach>
 
 </table>
 
-<a href="index.jsp"> Main page </a>
+<a href="http://localhost:8080"> Main page </a>
+<a href="http://localhost:8080/registration"> Create user</a>
 </body>
 </html>
