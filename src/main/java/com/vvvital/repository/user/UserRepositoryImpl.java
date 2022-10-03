@@ -1,4 +1,4 @@
-package com.vvvital.repository;
+package com.vvvital.repository.user;
 
 import com.vvvital.model.User;
 import org.slf4j.Logger;
@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.util.List;
-import java.util.Objects;
 
 @Repository
 public class UserRepositoryImpl implements UserRepository {
@@ -21,7 +20,7 @@ public class UserRepositoryImpl implements UserRepository {
     private final JdbcTemplate jdbcTemplate;
 
     @Autowired
-    public UserRepositoryImpl(DataSource dataSource,UserMapper userMapper) {
+    public UserRepositoryImpl(DataSource dataSource, UserMapper userMapper) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
         this.ROW_MAPPER = userMapper;
     }

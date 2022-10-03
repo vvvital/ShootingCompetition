@@ -3,7 +3,7 @@ package com.vvvital.web;
 import com.vvvital.Service.UserService;
 import com.vvvital.model.Role;
 import com.vvvital.model.User;
-import com.vvvital.repository.UserRepository;
+import com.vvvital.repository.user.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -2,6 +2,7 @@ package com.vvvital.repository;
 
 import com.vvvital.model.Role;
 import com.vvvital.model.User;
+import com.vvvital.repository.user.UserRepositoryImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

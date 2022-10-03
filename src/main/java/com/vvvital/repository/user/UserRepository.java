@@ -1,4 +1,4 @@
-package com.vvvital.repository;
+package com.vvvital.repository.user;
 
 import com.vvvital.model.User;
 import org.springframework.stereotype.Repository;

@@ -1,7 +1,7 @@
 package com.vvvital;
 
 import com.vvvital.model.User;
-import com.vvvital.repository.UserRepositoryImpl;
+import com.vvvital.repository.user.UserRepositoryImpl;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.sql.SQLException;
