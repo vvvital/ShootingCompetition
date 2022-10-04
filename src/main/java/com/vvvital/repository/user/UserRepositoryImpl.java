@@ -29,11 +29,11 @@ public class UserRepositoryImpl implements UserRepository {
     public void update(User user) {
         if (user.getId()==null) {
             logger.info("create user {}",user.toString());
-            jdbcTemplate.update("INSERT INTO users VALUES (nextval('serial'),?,?,?,?,?,?)"
+            jdbcTemplate.update("INSERT INTO users VALUES (nextval('user_sequence'),?,?,?,?,?,?)"
                     , user.getName(), user.getLastName(), user.getAge(), user.getEmail(), user.getPassword(), user.getRole().toString());
         }else {
             logger.info("update user {}", user.toString());
-            jdbcTemplate.update("UPDATE users set name=?,lastname=?,age=?,email=?,password=?,role=? where id=?",
+            jdbcTemplate.update("UPDATE users set name=?,lastname=?,age=?,email=?,password=?,role=? where userid=?",
                     user.getName(),user.getLastName(),user.getAge(),user.getEmail(),user.getPassword(),user.getRole().toString(),user.getId());
         }
 
@@ -41,7 +41,7 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public User getId(Integer id) {
-        return DataAccessUtils.singleResult(jdbcTemplate.query("select * from users where id=?",ROW_MAPPER,id));
+        return DataAccessUtils.singleResult(jdbcTemplate.query("select * from users where userid=?",ROW_MAPPER,id));
     }
 
     public User getEmail(String email){
@@ -56,6 +56,6 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public void delete(Integer id) {
         logger.info("delete {}",id);
-        jdbcTemplate.update("delete from users where id=?",id);
+        jdbcTemplate.update("delete from users where userid=?",id);
     }
 }
