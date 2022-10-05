@@ -1,4 +1,4 @@
-package com.vvvital.repository;
+package com.vvvital.repository.user;
 
 import com.vvvital.model.Role;
 import com.vvvital.model.User;
@@ -13,7 +13,7 @@ public class UserMapper implements RowMapper<User> {
     @Override
     public User mapRow(ResultSet rs, int rowNum) throws SQLException {
         User user = new User();
-        user.setId(rs.getInt("id"));
+        user.setId(rs.getInt("user_id"));
         user.setName(rs.getString("name"));
         user.setLastName(rs.getString("lastname"));
         user.setAge(rs.getInt("age"));

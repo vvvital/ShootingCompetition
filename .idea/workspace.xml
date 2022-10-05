@@ -9,12 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faab7f72-714f-4657-b031-a6ec748d35a4" name="Changes" comment="create jsp form">
+    <list default="true" id="faab7f72-714f-4657-b031-a6ec748d35a4" name="Changes" comment="added CompetitionRepository,table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/Service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/web/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/web/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/registered.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/registered.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/model/Competition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/model/Competition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/competition/CompetitionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/competition/CompetitionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/competition/CompetitionRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/competition/CompetitionRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/user/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/user/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/user/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/user/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/db/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/db/initDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/springConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/springConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vvvital/repository/CompetitionRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vvvital/repository/CompetitionRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +32,8 @@
         <option value="spring-beans.schema" />
         <option value="JUnit4 Test Class" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -107,10 +111,34 @@
       <recent name="com.vvvital.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.65">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.vvvital.Main" />
+  <component name="RunManager" selected="JUnit.CompetitionRepositoryTest">
+    <configuration name="CompetitionRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ShootingCompetition" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vvvital.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vvvital.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.vvvital.repository.CompetitionRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompetitionRepositoryTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShootingCompetition" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vvvital.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vvvital.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.vvvital.repository.CompetitionRepositoryTest" />
+      <option name="METHOD_NAME" value="update" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,7 +147,7 @@
       <module name="ShootingCompetition" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.vvvital.repository.*" />
+          <option name="PATTERN" value="com.vvvital.repository.user.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,7 +162,7 @@
       <module name="ShootingCompetition" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.vvvital.repository.*" />
+          <option name="PATTERN" value="com.vvvital.repository.user.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -150,7 +178,7 @@
       <module name="ShootingCompetition" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.vvvital.repository.*" />
+          <option name="PATTERN" value="com.vvvital.repository.user.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -251,7 +279,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.CompetitionRepositoryTest" />
+      <item itemvalue="JUnit.CompetitionRepositoryTest.update" />
       <item itemvalue="JUnit.UserRepositoryImplTest.getAll" />
       <item itemvalue="JUnit.UserRepositoryImplTest" />
       <item itemvalue="JUnit.UserRepositoryImplTest.getId" />
@@ -259,11 +288,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserRepositoryImplTest.getId" />
+        <item itemvalue="JUnit.CompetitionRepositoryTest" />
+        <item itemvalue="JUnit.CompetitionRepositoryTest.update" />
         <item itemvalue="JUnit.UserRepositoryImplTest" />
-        <item itemvalue="JUnit.UserRepositoryImplTest.getAll" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.UserRepositoryImplTest.getId" />
+        <item itemvalue="JUnit.UserRepositoryImplTest.getAll" />
       </list>
     </recent_temporary>
   </component>
@@ -321,6 +350,9 @@
       <workItem from="1664562144187" duration="3882000" />
       <workItem from="1664624575639" duration="13846000" />
       <workItem from="1664702593012" duration="13168000" />
+      <workItem from="1664817782052" duration="11229000" />
+      <workItem from="1664912274583" duration="4317000" />
+      <workItem from="1664993212949" duration="9433000" />
     </task>
     <task id="LOCAL-00001" summary="start project first commit">
       <created>1661012223715</created>
@@ -350,7 +382,35 @@
       <option name="project" value="LOCAL" />
       <updated>1664302515958</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added roles">
+      <created>1664719856531</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664719856531</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added roles">
+      <created>1664729156911</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664729156911</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added roles">
+      <created>1664831085479</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664831085480</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added CompetitionRepository,table">
+      <created>1664917011146</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664917011146</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,7 +432,9 @@
     <MESSAGE value="added front jsp" />
     <MESSAGE value="implement method save&#10;resolved spring context" />
     <MESSAGE value="create jsp form" />
-    <option name="LAST_COMMIT_MESSAGE" value="create jsp form" />
+    <MESSAGE value="added roles" />
+    <MESSAGE value="added CompetitionRepository,table" />
+    <option name="LAST_COMMIT_MESSAGE" value="added CompetitionRepository,table" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

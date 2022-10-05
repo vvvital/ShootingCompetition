@@ -1,4 +1,4 @@
-package com.vvvital.repository;
+package com.vvvital.repository.user;
 
 import com.vvvital.model.User;
 import org.slf4j.Logger;
@@ -11,17 +11,16 @@ import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.util.List;
-import java.util.Objects;
 
 @Repository
 public class UserRepositoryImpl implements UserRepository {
 
-    private Logger logger= LoggerFactory.getLogger(UserRepositoryImpl.class);
+    private final Logger logger= LoggerFactory.getLogger(UserRepositoryImpl.class);
     private final RowMapper<User> ROW_MAPPER;
     private final JdbcTemplate jdbcTemplate;
 
     @Autowired
-    public UserRepositoryImpl(DataSource dataSource,UserMapper userMapper) {
+    public UserRepositoryImpl(DataSource dataSource, UserMapper userMapper) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
         this.ROW_MAPPER = userMapper;
     }
@@ -30,11 +29,11 @@ public class UserRepositoryImpl implements UserRepository {
     public void update(User user) {
         if (user.getId()==null) {
             logger.info("create user {}",user.toString());
-            jdbcTemplate.update("INSERT INTO users VALUES (nextval('serial'),?,?,?,?,?,?)"
+            jdbcTemplate.update("INSERT INTO users VALUES (nextval('user_sequence'),?,?,?,?,?,?)"
                     , user.getName(), user.getLastName(), user.getAge(), user.getEmail(), user.getPassword(), user.getRole().toString());
         }else {
             logger.info("update user {}", user.toString());
-            jdbcTemplate.update("UPDATE users set name=?,lastname=?,age=?,email=?,password=?,role=? where id=?",
+            jdbcTemplate.update("UPDATE users set name=?,lastname=?,age=?,email=?,password=?,role=? where user_id=?",
                     user.getName(),user.getLastName(),user.getAge(),user.getEmail(),user.getPassword(),user.getRole().toString(),user.getId());
         }
 
@@ -42,7 +41,7 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public User getId(Integer id) {
-        return DataAccessUtils.singleResult(jdbcTemplate.query("select * from users where id=?",ROW_MAPPER,id));
+        return DataAccessUtils.singleResult(jdbcTemplate.query("select * from users where user_id=?",ROW_MAPPER,id));
     }
 
     public User getEmail(String email){
@@ -57,6 +56,6 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public void delete(Integer id) {
         logger.info("delete {}",id);
-        jdbcTemplate.update("delete from users where id=?",id);
+        jdbcTemplate.update("delete from users where user_id=?",id);
     }
 }
