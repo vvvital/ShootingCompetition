@@ -9,7 +9,7 @@ CREATE sequence competition_sequence increment by 1 start with 1000;
 
 Create table users
 (
-    userId   Integer primary key DEFAULT nextval('user_sequence'),
+    user_id   Integer primary key DEFAULT nextval('user_sequence'),
     name     VARCHAR NOT NULL,
     lastName VARCHAR NOT NULL,
     age      INTEGER NOT NULL,
@@ -25,8 +25,8 @@ create table competition
     name        varchar NOT NULL,
     date        date    not null,
     description varchar not null,
-    userId      INTEGER not null,
-    foreign key (userId) references users (userId)
+    userId      INTEGER ,
+    foreign key (userId) references users (user_id)
 );
 
 

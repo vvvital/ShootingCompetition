@@ -15,7 +15,7 @@ import java.util.List;
 @Repository
 public class UserRepositoryImpl implements UserRepository {
 
-    private Logger logger= LoggerFactory.getLogger(UserRepositoryImpl.class);
+    private final Logger logger= LoggerFactory.getLogger(UserRepositoryImpl.class);
     private final RowMapper<User> ROW_MAPPER;
     private final JdbcTemplate jdbcTemplate;
 
@@ -33,7 +33,7 @@ public class UserRepositoryImpl implements UserRepository {
                     , user.getName(), user.getLastName(), user.getAge(), user.getEmail(), user.getPassword(), user.getRole().toString());
         }else {
             logger.info("update user {}", user.toString());
-            jdbcTemplate.update("UPDATE users set name=?,lastname=?,age=?,email=?,password=?,role=? where userid=?",
+            jdbcTemplate.update("UPDATE users set name=?,lastname=?,age=?,email=?,password=?,role=? where user_id=?",
                     user.getName(),user.getLastName(),user.getAge(),user.getEmail(),user.getPassword(),user.getRole().toString(),user.getId());
         }
 
@@ -41,7 +41,7 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public User getId(Integer id) {
-        return DataAccessUtils.singleResult(jdbcTemplate.query("select * from users where userid=?",ROW_MAPPER,id));
+        return DataAccessUtils.singleResult(jdbcTemplate.query("select * from users where user_id=?",ROW_MAPPER,id));
     }
 
     public User getEmail(String email){
@@ -56,6 +56,6 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public void delete(Integer id) {
         logger.info("delete {}",id);
-        jdbcTemplate.update("delete from users where userid=?",id);
+        jdbcTemplate.update("delete from users where user_id=?",id);
     }
 }

@@ -15,8 +15,7 @@ public class Competition {
     private List<User> members;
     private String description;
 
-    public Competition(Integer id, String name, Date date, List<User> membersScore, String description) {
-        this.id = id;
+    public Competition(String name, Date date, String description) {
         this.name = name;
         this.date = date;
         this.description = description;
