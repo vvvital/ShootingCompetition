@@ -92,4 +92,10 @@ public class CompetitionRepositoryTest {
         assertThat(expected).isNotNull();
         assertThat(expected).isIn(actualList.get(0));
     }
+
+    @Test
+    public void getDate(){
+        Competition expected=comptRepository.getByDate(LocalDateTime.of(2022, 5, 10, 12, 0));
+        assertThat(expected).isEqualTo(actualList.get(1));
+    }
 }

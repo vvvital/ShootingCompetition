@@ -9,13 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faab7f72-714f-4657-b031-a6ec748d35a4" name="Changes" comment="replace Date to LocalDateTime">
+    <list default="true" id="faab7f72-714f-4657-b031-a6ec748d35a4" name="Changes" comment="add getById&#10;add CompetitionRepositoryTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/model/Competition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/model/Competition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/competition/CompetitionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/competition/CompetitionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/competition/CompetitionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/competition/CompetitionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/competition/CompetitionRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/competition/CompetitionRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/vvvital/repository/CompetitionRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vvvital/repository/CompetitionRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -415,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665245585997</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add getById&#10;add CompetitionRepositoryTest">
+      <created>1665248644428</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1665248644428</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +442,8 @@
     <MESSAGE value="added roles" />
     <MESSAGE value="added CompetitionRepository,table" />
     <MESSAGE value="replace Date to LocalDateTime" />
-    <option name="LAST_COMMIT_MESSAGE" value="replace Date to LocalDateTime" />
+    <MESSAGE value="add getById&#10;add CompetitionRepositoryTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="add getById&#10;add CompetitionRepositoryTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
