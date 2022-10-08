@@ -29,11 +29,11 @@ public class CompetitionRepositoryImpl implements CompetitionRepository {
     @Override
     public boolean update(Competition competition) {
         if (competition.getId() == null) {
-            logger.info("create new competition");
+            //logger.info("create new competition");
             return jdbcTemplate.update("INSERT INTO competition VALUES (nextval('competition_sequence'),?,?,?,?)"
                     , competition.getName(), competition.getDate(), competition.getDescription(), competition.getMembers()) != 0;
         } else {
-            logger.info("update competition id {}", competition.getId());
+            //logger.info("update competition id {}", competition.getId());
             return jdbcTemplate.update("update competition set name=?,date_time=?,description=?,userid=? where compt_id=?"
                     , competition.getName(), competition.getDate(), competition.getDescription(), competition.getMembers(), competition.getId()) != 0;
         }
@@ -52,6 +52,10 @@ public class CompetitionRepositoryImpl implements CompetitionRepository {
     @Override
     public Competition getByDate(LocalDateTime date) {
         return DataAccessUtils.singleResult(jdbcTemplate.query("select * from competition where date_time=?",ROW_MAPPER,date));
+    }
+
+    public Competition getById(Integer id){
+        return DataAccessUtils.singleResult(jdbcTemplate.query("select * from competition where compt_id=?",ROW_MAPPER,id));
     }
 
 }
