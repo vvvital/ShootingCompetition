@@ -10,7 +10,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Repository
@@ -34,7 +34,7 @@ public class CompetitionRepositoryImpl implements CompetitionRepository {
                     , competition.getName(), competition.getDate(), competition.getDescription(), competition.getMembers()) != 0;
         } else {
             logger.info("update competition id {}", competition.getId());
-            return jdbcTemplate.update("update competition set name=?,date=?,description=?,userid=? where compt_id=?"
+            return jdbcTemplate.update("update competition set name=?,date_time=?,description=?,userid=? where compt_id=?"
                     , competition.getName(), competition.getDate(), competition.getDescription(), competition.getMembers(), competition.getId()) != 0;
         }
     }
@@ -50,8 +50,8 @@ public class CompetitionRepositoryImpl implements CompetitionRepository {
     }
 
     @Override
-    public Competition getByDate(Date date) {
-        return DataAccessUtils.singleResult(jdbcTemplate.query("select * from competition where date=?",ROW_MAPPER,date));
+    public Competition getByDate(LocalDateTime date) {
+        return DataAccessUtils.singleResult(jdbcTemplate.query("select * from competition where date_time=?",ROW_MAPPER,date));
     }
 
 }

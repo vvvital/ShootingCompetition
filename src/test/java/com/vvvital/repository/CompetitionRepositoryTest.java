@@ -1,7 +1,6 @@
 package com.vvvital.repository;
 
 import com.vvvital.model.Competition;
-import com.vvvital.repository.competition.CompetitionRepository;
 import com.vvvital.repository.competition.CompetitionRepositoryImpl;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,11 +13,10 @@ import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.jdbc.SqlConfig;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.time.Instant;
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.time.LocalDateTime;
 
 @ContextConfiguration({"classpath:springConfig.xml"})
 @RunWith(SpringRunner.class)
@@ -32,11 +30,11 @@ public class CompetitionRepositoryTest {
 
     @Before
     public void init() {
-        Competition newCompt1 = new Competition("test1", new Date(2022, 2, 5),
+        Competition newCompt1 = new Competition("test1", LocalDateTime.of(2022, 2, 5,12, 0),
                 "The stand shooting competition");
-        Competition newCompt2 = new Competition("test2", new Date(2022, 5, 10),
+        Competition newCompt2 = new Competition("test2", LocalDateTime.of(2022, 5, 10,12, 0),
                 "The shooting by moving target competition");
-        Competition newCompt3 = new Competition("test3", new Date(2022, 10, 20),
+        Competition newCompt3 = new Competition("test3", LocalDateTime.of(2022, 10, 20,12,0),
                 "The shooting by fixed target competition");
         comptRepository.update(newCompt1);
         comptRepository.update(newCompt2);

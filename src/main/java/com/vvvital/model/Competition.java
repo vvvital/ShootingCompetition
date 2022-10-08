@@ -3,6 +3,7 @@ package com.vvvital.model;
 import org.springframework.data.relational.core.mapping.MappedCollection;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -10,12 +11,12 @@ import java.util.List;
 public class Competition {
     private Integer id;
     private String name;
-    private Date date;
+    private LocalDateTime date;
     @MappedCollection(idColumn = "compt_id")
     private List<User> members;
     private String description;
 
-    public Competition(String name, Date date, String description) {
+    public Competition(String name, LocalDateTime date, String description) {
         this.name = name;
         this.date = date;
         this.description = description;
@@ -40,7 +41,7 @@ public class Competition {
         return name;
     }
 
-    public Date getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 
@@ -60,7 +61,7 @@ public class Competition {
         this.name = name;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 
