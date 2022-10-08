@@ -3,19 +3,20 @@ package com.vvvital.model;
 import org.springframework.data.relational.core.mapping.MappedCollection;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Objects;
 
 @Component
 public class Competition {
     private Integer id;
     private String name;
-    private Date date;
+    private LocalDateTime date;
     @MappedCollection(idColumn = "compt_id")
     private List<User> members;
     private String description;
 
-    public Competition(String name, Date date, String description) {
+    public Competition(String name, LocalDateTime date, String description) {
         this.name = name;
         this.date = date;
         this.description = description;
@@ -40,7 +41,7 @@ public class Competition {
         return name;
     }
 
-    public Date getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 
@@ -60,7 +61,7 @@ public class Competition {
         this.name = name;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 
@@ -70,5 +71,29 @@ public class Competition {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Competition{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", date=" + date +
+                ", members=" + members +
+                ", description='" + description + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Competition that = (Competition) o;
+        return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(date, that.date)  && Objects.equals(description, that.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, date, members, description);
     }
 }

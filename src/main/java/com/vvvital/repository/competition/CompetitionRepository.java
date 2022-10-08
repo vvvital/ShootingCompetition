@@ -3,7 +3,7 @@ package com.vvvital.repository.competition;
 import com.vvvital.model.Competition;
 import org.springframework.stereotype.Repository;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Repository
@@ -14,6 +14,8 @@ public interface CompetitionRepository {
 
     List<Competition>getAll();
 
-    Competition getByDate(Date date);
+    Competition getByDate(LocalDateTime date);
+
+    Competition getById(Integer id);
 
 }

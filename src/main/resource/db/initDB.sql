@@ -23,7 +23,7 @@ create table competition
 (
     compt_id          INTEGER primary key default nextval('competition_sequence'),
     name        varchar NOT NULL,
-    date        date    not null,
+    date_time        timestamp    not null,
     description varchar not null,
     userId      INTEGER ,
     foreign key (userId) references users (user_id)

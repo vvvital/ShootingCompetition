@@ -9,15 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faab7f72-714f-4657-b031-a6ec748d35a4" name="Changes" comment="added CompetitionRepository,table">
+    <list default="true" id="faab7f72-714f-4657-b031-a6ec748d35a4" name="Changes" comment="replace Date to LocalDateTime">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/model/Competition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/model/Competition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/competition/CompetitionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/competition/CompetitionMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/competition/CompetitionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/competition/CompetitionRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/competition/CompetitionRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/competition/CompetitionRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/user/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/user/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/user/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvvital/repository/user/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/db/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/db/initDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/springConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/springConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/vvvital/repository/CompetitionRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vvvital/repository/CompetitionRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -410,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664917011146</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="replace Date to LocalDateTime">
+      <created>1665245585997</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1665245585997</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,7 +439,8 @@
     <MESSAGE value="create jsp form" />
     <MESSAGE value="added roles" />
     <MESSAGE value="added CompetitionRepository,table" />
-    <option name="LAST_COMMIT_MESSAGE" value="added CompetitionRepository,table" />
+    <MESSAGE value="replace Date to LocalDateTime" />
+    <option name="LAST_COMMIT_MESSAGE" value="replace Date to LocalDateTime" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -448,6 +454,7 @@
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="com.vvvital.model.Competition" memberName="id" />
         <PinnedItemInfo parentTag="org.apache.catalina.core.DefaultInstanceManager" memberName="preDestroyMethods" />
         <PinnedItemInfo parentTag="org.apache.catalina.connector.Request" memberName="inputBuffer" />
         <PinnedItemInfo parentTag="org.apache.jasper.runtime.PageContextImpl" memberName="request" />
